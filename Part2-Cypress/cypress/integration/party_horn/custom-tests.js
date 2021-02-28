@@ -66,6 +66,9 @@ describe("Party Horn Tests", () => {
   });
   it("hi", () => {
     cy.get("#volume-number").clear().type("1000").trigger("input");
-    cy.get("#volume-number").should("have.class", ":invalid");
+    // cy.get("#volume-number:invalid").then(function (e) {
+    //   expect(e).to.be.true;
+    // });
+    cy.get("#volume-number").should("have.css", ":invalid");
   });
 });
